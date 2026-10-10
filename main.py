@@ -1,0 +1,8 @@
+print("Welcome to Student Budget Tracker!")
+
+income = float(input("Enter your monthly income $"))
+expenses = float(input("Enter your total monthly expenses $))
+
+remaining = income - expenses
+
+print("Your remaining balance is: $", round(remaining, 2))
