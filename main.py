@@ -1,8 +1,17 @@
 print("Welcome to Student Budget Tracker!")
 
 income = float(input("Enter your monthly income $"))
-expenses = float(input("Enter your total monthly expenses $))
+expenses = []
+while True:
+  expense = input("Enter an expense amount or type 'done' to finish: $")
+  if expense.lower() == "done":
+    break
+  expenses.append(float(expense))
+    
+total_expenses = sum(expenses)
+remaining = income - total_expenses 
 
-remaining = income - expenses
-
-print("Your remaining balance is: $", round(remaining, 2))
+print("n--- monthly budget summary ---")
+print("Monthly income: $", round(income, 2))
+print("Total expenses: $", round(total_expenses, 2))
+print("Remaining balance: $", round(remaining, 2))
